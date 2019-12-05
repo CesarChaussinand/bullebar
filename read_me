@@ -1,0 +1,13 @@
+projet de boite à rythme générant des motifs par commandes midi
+interface textuel (selection des fichiers sons au démarrage)
+programme change pour changer le tempo, play pause etc via midi, les notes midis permettent de définir des rĝles de génération de boucle
+(par ex. Do4 correspond à un kick sur tout les temps, sol4 à caisse claire sur 2 et 4, mib hi-hat sur les croches ternaires et mibécarre sur les croches binaire)
+
+pour ce faire :	intégrer jack, 
+				mettre les sons dans des tableaux,
+				convertir les messages midi en valeur dans un tableaux (tableaux d'int définissant quel son est joué au pas donné, 24 pas),
+				avancer pas à pas dans le tableau d'int et jouer les valeurs des tableaux de sons au bon moment
+				chaque tableau de son doit avoir sa variable de phase et une variable 'play-pause' qui vaut un quand le son joue et zéro quand il attend sa taille (phase = 0 si p/p == 0)
+				
+				
+chaque voix est assignée à une mi-octave ?
